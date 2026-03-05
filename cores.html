@@ -6,19 +6,21 @@
     <title>Retomando JS</title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
-<body>
+<body onload="EscolhaInicial()">
     <header>
         <nav>
-            <a href="index.html" class="a-nav"></a>
-            <a href="#" class="a-nav"></a>
-            <a href="calculadora.html" class="a-nav"></a>
-            <a href="novos.html" class="a-nav"></a>
+            <a href="home.html" id="firsta" class="a-nav">Home</a>
+            <a href="cores.html" class="a-nav">Troca-Cor</a>
+            <a href="calculadora.html" class="a-nav">Calculadora</a>
+            <a href="novos.html" class="a-nav">Novos-Itens</a>
         </nav>
         <div></div>
     </header>
     <main>
-        <section></section>
-        <aside></aside>
+        <div id="caixa-aleatoria" class="normal">eevee</div>
+        <input type="button" value="Aperte para trocar a cor" id="mudaCor" class="btn-troca">
+        <input type="button" value="Aperte para trocar o texto" id="mudaTexto" class="btn-troca">
+        <input type="button" value="" id="mudaImg" class="btn-troca">   
     </main>
     <footer>
 
