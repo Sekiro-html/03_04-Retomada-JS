@@ -116,23 +116,21 @@ nav {
     float: inline-start; 
 }
 
-.bolinha{
-    background-color: blueviolet;
+.gifcriado{
+    background-image: url(/IMG/Speed\ Wow\ GIF\ by\ STRAPPED!.gif);
+    background-repeat: no-repeat;
     width: 5%;
-    height: 6vh;
+    height: 10vh;
     display: block;
     float: left;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    border-radius: 30%;
     margin: 5px;
 }
 
-#addBolinhas {
+#addNovo {
     width: 10%;
-    height: 10vh;
+    height: 4vh;
+    font-size: 50px;
 }
 
 #resultado {

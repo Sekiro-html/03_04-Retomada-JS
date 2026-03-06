@@ -72,20 +72,36 @@ let tipo1 = '<li>Bulbasaur</li><li>Chikorita</li><li>Treecko</li><li>Turtwig</li
 let tipo2 = '<li>Charmander</li><li>Cyndaquil</li><li>Torchic</li><li>Chimchar</li><li>Tepig</li><li>Fennekin</li><li>Litten</li><li>Scorbunny</li>';
 let tipo3 = '<li>Squirtle</li><li>Totodile</li><li>Mudkip</li><li>Piplup</li><li>Oshawott</li><li>Froakie</li><li>Popplio</li><li>Sobble</li>';
 
-
+document.getElementById("pokeul").innerHTML = semtipo
+let eevee = "sim"
 
 btnTrocaTexto.addEventListener("click", () => {
     switch (escolha) {
         case "planta":
-            document.getElementById("pokeul").innerHTML = tipo1;
+            if (eevee == "sim") {
+                eevee = "não"
+                document.getElementById("pokeul").innerHTML = tipo1;
+            } else {
+                document.getElementById("pokeul").innerHTML = semtipo;
+            }
         break;  
 
         case "fogo": 
-            document.getElementById("pokeul").innerHTML = tipo2;
+            if (eevee == "sim") {
+                eevee = "não"
+                document.getElementById("pokeul").innerHTML = tipo2;
+            } else {
+                document.getElementById("pokeul").innerHTML = semtipo;
+            }
         break;
         
         case "agua": 
-            document.getElementById("pokeul").innerHTML = tipo3;
+            if (eevee == "sim") {
+                eevee = "não"
+                document.getElementById("pokeul").innerHTML = tipo3;
+            } else {
+                document.getElementById("pokeul").innerHTML = semtipo;
+            }
         break;
 
         default:
@@ -124,20 +140,22 @@ btnSoma.addEventListener("click", () => {
             alert("Você colocou um sinal que não existe ou não é suportado por essa calculadora!!!");
             alert("Pelo seu erro essa aba vai fechar em 3 segundos");
             window.close();
-
+        break;
+    }    
+    if (soma == 67) {
+        window.open('https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fftqtv08x3pof1.png', '_blank');
+    };
     let resultado = document.getElementById("resultado").innerHTML = "="+soma;
-
-
-}}); 
+}); 
 };
 function criador() {
-const btnBolhas = document.getElementById("addBolinhas");
+const btnCriador = document.getElementById("addNovo");
 let total = 0;
 let i = 0;
 let bolinhas = "";
-let bola = '<div class="bolinha"></div>';
+let bola = '<div class="gifcriado"></div>';
 
-btnBolhas.addEventListener("click", () => {
+btnCriador.addEventListener("click", () => {
     total = total + 1;
     bolinhas = "";
     for (i = 0; i < total; i++) {
