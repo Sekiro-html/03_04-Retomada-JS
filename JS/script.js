@@ -7,6 +7,7 @@ let confirmar = window.prompt("digite sua senha: ");
 if (confirmar == senha) {
     alert("Seja bem vindo "+txt);
 } else {
+    alert("Senha errada saia daqui");
     window.close();
 };
 
@@ -17,6 +18,7 @@ function sucesso(position) {
     console.log(position.coords.latitude, position.coords.longitude);
 
     var map = L.map('map').setView([51.505, -0.09], 17);
+
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -32,11 +34,11 @@ let caixa = document.getElementById("caixa-aleatoria");
 function EscolhaInicial() {
     const escolha = window.prompt("Escolha o tipo do inicial: ");
 
-btnTrocaFundo.addEventListener("click", () => {
+    btnTrocaFundo.addEventListener("click", () => {
     let caixa = document.getElementById("caixa-aleatoria");
 
 
-    if(escolha == "planta") {
+    if(escolha == "grama") {
         caixa.classList.add("planta");
         caixa.classList.remove("normal");
     } else {
@@ -61,36 +63,44 @@ btnTrocaFundo.addEventListener("click", () => {
     };
     console.log(caixa.className);
 });
-
 const btnTrocaTexto = document.getElementById("mudaTexto");
 
+console.log(escolha);
+
+let semtipo = "<ul><li>eevee</li></ul>";
+let tipo1 = "<li>Bulbasaur</li><li>Chikorita</li><li>Treecko</li><li>Turtwig</li><li>Snivy</li><li>Chespin</li><li>Rowlet</li><li>Grookey</li>";
+let tipo2 = "<li>Charmander</li><li>Cyndaquil</li><li>Torchic</li><li>Chimchar</li><li>Tepig</li><li>Fennekin</li><li>Litten</li><li>Scorbunny</li>";
+let tipo3 = "<li>Squirtle</li><li>Totodile</li><li>Mudkip</li><li>Piplup</li><li>Oshawott</li><li>Froakie</li><li>Popplio</li><li>Sobble</li>";
+
+let poke = "";
+let aparicaog = poke + tipo1;
+let aparicaof = poke + tipo2;
+let aparicaoa = poke + tipo3;
+let aparicaon = poke + semtipo;
+
+document.getElementById("pokeul").innerHTML = aparicaon;
+
 btnTrocaTexto.addEventListener("click", () => {
-    let caixa = document.getElementById("caixa  -aleatoria");
+    switch (escolha) {
+        case "grama", "planta" :
+            document.getElementById("pokeul").innerHTML = aparicaog;
+        break;  
 
-
-    if(escolha == "planta") {
-        caixa.innerHTML = "bulbasauro";
-    } else {
-        caixa.innerHTML = "<ul><li>eevee</li></ul>";
-    };
-
-    if(escolha == "fogo") {
-        caixa.innerHTML = "<ul><li>Charmander</li><li>Cyndaquil</li><li>Torchic</li><li>Chimchar</li><li>Tepig</li><li>Fennekin</li><li>Litten</li><li>Scorbunny</li></ul>";
-    } else {
-        caixa.innerHTML = "<ul><li>eevee</li></ul>";
-    };
-    
-    if(escolha == "agua") {
-        caixa.innerHTML = "<ul><li>Squirtle</li><li>Totodile</li><li>Mudkip</li><li>Piplup</li><li>Oshawott</li><li>Froakie</li><li>Popplio</li><li>Sobble</li></ul>";
-    } else {
-        caixa.innerHTML = "<ul><li>eevee</li></ul>";
-    };
+        case "fogo" : 
+            document.getElementById("pokeul").innerHTML = aparicaof;
+        break;
+        
+        case "água", "agua" : 
+            document.getElementById("pokeul").innerHTML = aparicaoa;
+        break;
+    }
 });
 
 };
 
-btnSoma = document.getElementById("soma")
-btnSoma.addEventListener("click", () =>{
+function soma() {
+const btnSoma = document.getElementById("soma");
+btnSoma.addEventListener("click", () => {
     let numero1 = document.getElementById("escolha-n1").value;
     let numero2 = document.getElementById("escolha-n2").value;
     let sinal = document.getElementById("sinal").value;
@@ -115,7 +125,9 @@ btnSoma.addEventListener("click", () =>{
             alert("Você colocou um sinal que não existe ou não é suportado por essa calculadora!!!");
             alert("Pelo seu erro essa aba vai fechar em 3 segundos");
             window.close();
-    };
 
     let resultado = document.getElementById("resultado").innerHTML = "="+soma;
-})
+
+
+}}); 
+};

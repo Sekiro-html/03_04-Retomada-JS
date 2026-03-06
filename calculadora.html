@@ -6,7 +6,7 @@
     <title>Retomando JS</title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
-<body>
+<body onload="soma()">
     <header>
         <nav>
             <a href="home.html" id="firsta" class="a-nav">Home</a>
@@ -19,9 +19,9 @@
     <main>
         <section id="section-calculos">
             <div id="calculadora">
-                <input type="text" name="" id="escolha-n1" class="interface-calc">
-                <input type="text" name="" id="sinal" class="interface-calc">
-                <input type="text" name="" id="escolha-n2" class="interface-calc">
+                <input type="text" name="" placeholder="n1" id="escolha-n1" class="interface-calc">
+                <input type="text" name="" id="sinal" placeholder="sinal" class="interface-calc">
+                <input type="text" name="" id="escolha-n2" placeholder="n2" class="interface-calc">
                 <input type="button" value="calcular" id="soma">
                 <span id="resultado"></span>
             </div>
