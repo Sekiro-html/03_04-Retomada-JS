@@ -116,6 +116,25 @@ nav {
     float: inline-start; 
 }
 
+.bolinha{
+    background-color: blueviolet;
+    width: 5%;
+    height: 6vh;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 5px;
+}
+
+#addBolinhas {
+    width: 10%;
+    height: 10vh;
+}
+
 #resultado {
     color: beige;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

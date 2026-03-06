@@ -38,7 +38,7 @@ function EscolhaInicial() {
     let caixa = document.getElementById("caixa-aleatoria");
 
 
-    if(escolha == "grama") {
+    if(escolha == "planta") {
         caixa.classList.add("planta");
         caixa.classList.remove("normal");
     } else {
@@ -67,32 +67,30 @@ const btnTrocaTexto = document.getElementById("mudaTexto");
 
 console.log(escolha);
 
-let semtipo = "<ul><li>eevee</li></ul>";
-let tipo1 = "<li>Bulbasaur</li><li>Chikorita</li><li>Treecko</li><li>Turtwig</li><li>Snivy</li><li>Chespin</li><li>Rowlet</li><li>Grookey</li>";
-let tipo2 = "<li>Charmander</li><li>Cyndaquil</li><li>Torchic</li><li>Chimchar</li><li>Tepig</li><li>Fennekin</li><li>Litten</li><li>Scorbunny</li>";
-let tipo3 = "<li>Squirtle</li><li>Totodile</li><li>Mudkip</li><li>Piplup</li><li>Oshawott</li><li>Froakie</li><li>Popplio</li><li>Sobble</li>";
+let semtipo = '<li>eevee</li>';
+let tipo1 = '<li>Bulbasaur</li><li>Chikorita</li><li>Treecko</li><li>Turtwig</li><li>Snivy</li><li>Chespin</li><li>Rowlet</li><li>Grookey</li>';
+let tipo2 = '<li>Charmander</li><li>Cyndaquil</li><li>Torchic</li><li>Chimchar</li><li>Tepig</li><li>Fennekin</li><li>Litten</li><li>Scorbunny</li>';
+let tipo3 = '<li>Squirtle</li><li>Totodile</li><li>Mudkip</li><li>Piplup</li><li>Oshawott</li><li>Froakie</li><li>Popplio</li><li>Sobble</li>';
 
-let poke = "";
-let aparicaog = poke + tipo1;
-let aparicaof = poke + tipo2;
-let aparicaoa = poke + tipo3;
-let aparicaon = poke + semtipo;
 
-document.getElementById("pokeul").innerHTML = aparicaon;
 
 btnTrocaTexto.addEventListener("click", () => {
     switch (escolha) {
-        case "grama", "planta" :
-            document.getElementById("pokeul").innerHTML = aparicaog;
+        case "planta":
+            document.getElementById("pokeul").innerHTML = tipo1;
         break;  
 
-        case "fogo" : 
-            document.getElementById("pokeul").innerHTML = aparicaof;
+        case "fogo": 
+            document.getElementById("pokeul").innerHTML = tipo2;
         break;
         
-        case "água", "agua" : 
-            document.getElementById("pokeul").innerHTML = aparicaoa;
+        case "agua": 
+            document.getElementById("pokeul").innerHTML = tipo3;
         break;
+
+        default:
+            document.getElementById("pokeul").innerHTML = semtipo;
+        break;    
     }
 });
 
@@ -100,6 +98,7 @@ btnTrocaTexto.addEventListener("click", () => {
 
 function soma() {
 const btnSoma = document.getElementById("soma");
+
 btnSoma.addEventListener("click", () => {
     let numero1 = document.getElementById("escolha-n1").value;
     let numero2 = document.getElementById("escolha-n2").value;
@@ -130,4 +129,20 @@ btnSoma.addEventListener("click", () => {
 
 
 }}); 
+};
+function criador() {
+const btnBolhas = document.getElementById("addBolinhas");
+let total = 0;
+let i = 0;
+let bolinhas = "";
+let bola = '<div class="bolinha"></div>';
+
+btnBolhas.addEventListener("click", () => {
+    total = total + 1;
+    bolinhas = "";
+    for (i = 0; i < total; i++) {
+        bolinhas = bolinhas + bola;
+    }
+    document.getElementById("agruparBolinhas").innerHTML = bolinhas;
+});
 };
