@@ -17,13 +17,12 @@ document.getElementById("apresentacao").innerHTML = "Olá "+txt+" aonde quer ir?
 function sucesso(position) {
     console.log(position.coords.latitude, position.coords.longitude);
 
-    var map = L.map('map').setView([51.505, -0.09], 17);
+    var map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 17);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-
 };
 
 navigator.geolocation.getCurrentPosition(sucesso);
@@ -38,7 +37,7 @@ function EscolhaInicial() {
     let caixa = document.getElementById("caixa-aleatoria");
 
 
-    if(escolha == "planta") {
+    if(caixa.className == "normal") {
         caixa.classList.add("planta");
         caixa.classList.remove("normal");
     } else {
@@ -46,7 +45,7 @@ function EscolhaInicial() {
         caixa.classList.remove("planta");
     };
 
-    if(escolha == "fogo") {
+    if(caixa.className == "normal") {
         caixa.classList.add("fogo");
         caixa.classList.remove("normal");
     } else {
@@ -54,7 +53,7 @@ function EscolhaInicial() {
         caixa.classList.remove("fogo");
     };
     
-    if(escolha == "agua") {
+    if(caixa.className == "normal") {
         caixa.classList.add("agua");
         caixa.classList.remove("normal");
     } else {
