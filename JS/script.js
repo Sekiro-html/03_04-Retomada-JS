@@ -140,10 +140,7 @@ btnSoma.addEventListener("click", () => {
             alert("Pelo seu erro essa aba vai fechar em 3 segundos");
             window.close();
         break;
-    }    
-    if (soma == 67) {
-        window.open('https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fftqtv08x3pof1.png', '_blank');
-    };
+    }
     let resultado = document.getElementById("resultado").innerHTML = "="+soma;
 }); 
 };

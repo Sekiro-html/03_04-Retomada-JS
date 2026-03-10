@@ -75,7 +75,7 @@ nav {
 .btn-troca {
     width: 20vh;
     height: 5vh;
-    font-size: 50px;
+    font-size: 1.5vh;
 }
 
 #mainsec {
@@ -129,8 +129,8 @@ nav {
 .gifcriado{
     background-image: url(/IMG/Speed\ Wow\ GIF\ by\ STRAPPED!.gif);
     background-repeat: no-repeat;
-    width: 5%;
-    height: 10vh;
+    width: 50vh;
+    height: 50vh;
     display: block;
     float: left;
     border-radius: 30%;
@@ -139,8 +139,8 @@ nav {
 
 #addNovo {
     width: 10%;
-    height: 4vh;
-    font-size: 50px;
+    height: 6vh;
+    font-size: 1.5vh;
 }
 
 #apresentacao {
